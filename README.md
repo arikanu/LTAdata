@@ -1,5 +1,3 @@
-LTAdata
-=======
 This program is designed for extracting:
 
 * ERPRate
@@ -14,13 +12,16 @@ How to use:
 
 1)	make the required changes in (XmlUtils package) Connection.java
 
-2)	make the required changes in (default package) main.java
+2)	make the required changes in (default package) ExtractDataMain.java
 (required changes are noted as comment lines)
 
-3)	Run main.java
+3)	Run ExtractDataMain.java to extract data
 
 4)	Extracted data files will be located in the specified location (folderName) as Xml and delimited Txt files.
 
+5)	make the required changes in (default package) CombineFilesMain.java
+
+6)	Run CombineFilesMain.java to combine created Txt files in a single file
 
 
 
