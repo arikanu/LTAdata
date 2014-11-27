@@ -1,0 +1,8 @@
+1417020329956	Rename type 'ERPRate'
+1417020898923	Delete element
+1417021543588	Rename local variable 'apUrl'
+1417021568033	Rename local variable 'apiUrl'
+1417021579779	Rename field 'apUrl'
+1417021811202	Rename type 'ERPRate'
+1417022004452	Rename method 'writeToFile'
+1417022172047	Rename method 'setWholeXml'

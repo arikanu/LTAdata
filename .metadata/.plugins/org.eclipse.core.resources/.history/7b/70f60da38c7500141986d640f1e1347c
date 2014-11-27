@@ -1,0 +1,20 @@
+package dataSets;
+
+import java.net.URL;
+import java.net.URLConnection;
+
+public class Connection {
+
+	private String accountKey;
+	private String uniqueId;
+	
+	public Connection(String accountKey, String uniqueId) {
+		this.accountKey = accountKey;
+		this.uniqueId = uniqueId;
+	}
+	
+	public URLConnection getUrlConnection() {
+		URL url = new URL(apiUrl);
+	}
+	
+}

@@ -1,0 +1,23 @@
+import java.net.HttpURLConnection;
+import java.net.URL;
+
+
+public class abc {
+
+	public static void main(String[] args) {
+
+
+		URL url;
+		HttpURLConnection connection = null;
+		
+		try {
+			
+			url = new URL("http://datamall.mytransport.sg/ltaodataservice.svc/BusStopCodeSet?$skip=0");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+
+	}
+
+}

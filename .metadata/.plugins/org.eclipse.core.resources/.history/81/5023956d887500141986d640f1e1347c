@@ -1,0 +1,12 @@
+import javax.servlet.http.HttpServletRequest;
+
+
+public class main {
+
+	public static void main(String[] args) {
+		HttpServletRequest request;
+		
+
+	}
+
+}

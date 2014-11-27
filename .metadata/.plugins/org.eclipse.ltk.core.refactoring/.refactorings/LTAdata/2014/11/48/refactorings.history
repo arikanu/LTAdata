@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;busStopCodeSet.java&apos; to &apos;LTADataGet/src/(default package)&apos;&#x0D;&#x0A;- Original project: &apos;LTAdata&apos;&#x0D;&#x0A;- Destination element: &apos;LTADataGet/src/(default package)&apos;&#x0D;&#x0A;- Original element: &apos;busStopCodeSet.java&apos;" description="Copy compilation unit" destination="=LTADataGet/src&lt;" element1="/src&lt;{busStopCodeSet.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1417018974118" units="1" version="1.0"/>
+</session>

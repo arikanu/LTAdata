@@ -1,0 +1,14 @@
+import dataSets.ERPRate;
+
+
+public class main {
+
+	public static void main(String[] args) throws IOException {
+
+
+		ERPRate erprate = new ERPRate("");
+		erprate.writeToFile();
+		
+	}
+
+}

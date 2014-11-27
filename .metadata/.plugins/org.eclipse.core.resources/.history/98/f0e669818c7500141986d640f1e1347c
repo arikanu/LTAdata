@@ -1,0 +1,10 @@
+package dataSets;
+
+public class Connection {
+
+	private String accountKey;
+	private String uniqueId;
+	
+	
+	
+}

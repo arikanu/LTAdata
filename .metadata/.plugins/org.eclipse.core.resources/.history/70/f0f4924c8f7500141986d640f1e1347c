@@ -1,0 +1,14 @@
+import dataSets.DataSet;
+
+
+public class main {
+
+	public static void main(String[] args) {
+
+
+		DataSet erprate = new DataSet("0", "");
+		erprate.writeToFile();
+		
+	}
+
+}
