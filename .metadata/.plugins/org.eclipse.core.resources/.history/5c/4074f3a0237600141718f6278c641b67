@@ -1,0 +1,8 @@
+package FileUtils;
+
+public class FileUtils {
+
+	public static String readAllText(String filepath) {
+		
+	}
+}

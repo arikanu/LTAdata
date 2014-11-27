@@ -1,0 +1,15 @@
+package BatchFile;
+
+public class abc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		FolderFiles ff = new FolderFiles("D:/Postdoc/Data/LTA/");
+		
+		System.out.println(ff.getFilepaths().size());
+		System.out.println(ff.getFilepaths().get(0).toString());
+		
+	}
+
+}

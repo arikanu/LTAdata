@@ -60,7 +60,7 @@ public class DataSet {
 		BufferedWriter bw = new BufferedWriter(fw);
 		bw.write(strXml);
 		bw.close();
-		MsgFile.fileWritten(pathname);
+		MsgFile.fileCreated(pathname);
 	}
 
 	

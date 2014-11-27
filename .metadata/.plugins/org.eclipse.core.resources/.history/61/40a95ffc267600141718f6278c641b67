@@ -1,0 +1,18 @@
+package FileUtil;
+
+import FolderFiles;
+
+public class abc {
+
+	public static void main(String[] args) {
+
+
+		FolderFiles ff = new FolderFiles("D:/Postdoc/Data/LTA/", Extension.TXT, "TravelTimeSet");
+		
+		
+		
+		ff.combineFiles("TravelTimeSet.txt");
+		
+	}
+
+}

@@ -1,0 +1,14 @@
+package FileUtils;
+
+public class FileUtils {
+
+	public static String readAllText(String filepath) {
+		StringBuilder sb = new StringBuilder(512);
+		try {
+			Reader r = new InputStreamReader(is, "UTF-8");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

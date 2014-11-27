@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="java.io.BufferedReader"/>
-<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-<fullyQualifiedTypeName name="busStopCodeSet"/>
-<fullyQualifiedTypeName name="java.net.MalformedURLException"/>
-<fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="java.net.URL"/>
 <fullyQualifiedTypeName name="java.net.HttpURLConnection"/>
 <fullyQualifiedTypeName name="java.io.DataOutputStream"/>
@@ -16,7 +11,6 @@
 <fullyQualifiedTypeName name="dataSets.Connection"/>
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="javax.xml.stream.XMLInputFactory"/>
-<fullyQualifiedTypeName name="java.io.InputStream"/>
 <fullyQualifiedTypeName name="java.io.FileInputStream"/>
 <fullyQualifiedTypeName name="javax.xml.stream.events.XMLEvent"/>
 <fullyQualifiedTypeName name="java.util.Iterator"/>
@@ -40,19 +34,30 @@
 <fullyQualifiedTypeName name="dataSets.TimeTravelSet"/>
 <fullyQualifiedTypeName name="TextWriter.TextWritingUtils"/>
 <fullyQualifiedTypeName name="TextUtils.StrList"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="XmlUtils.DataSet"/>
 <fullyQualifiedTypeName name="java.io.FileWriter"/>
 <fullyQualifiedTypeName name="XmlClasses.ERPRates"/>
-<fullyQualifiedTypeName name="java.nio.file.Path"/>
-<fullyQualifiedTypeName name="java.nio.file.Paths"/>
 <fullyQualifiedTypeName name="TextUtils.StrFileNames"/>
 <fullyQualifiedTypeName name="TextUtils.StrFind"/>
 <fullyQualifiedTypeName name="XmlClasses.TimeTravelSets"/>
+<fullyQualifiedTypeName name="ConsoleMessages.ConsoleFile"/>
+<fullyQualifiedTypeName name="ConsoleMessages.MsgGeneral"/>
 <fullyQualifiedTypeName name="java.io.File"/>
+<fullyQualifiedTypeName name="BatchFile.FolderFiles"/>
+<fullyQualifiedTypeName name="BatchFile.FolderFiles.Extensions"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="TextUtils.StrFileName"/>
 <fullyQualifiedTypeName name="TextUtils.StrSubstring"/>
-<fullyQualifiedTypeName name="ConsoleMessages.ConsoleFile"/>
+<fullyQualifiedTypeName name="BatchFile.FolderFiles.Extension"/>
+<fullyQualifiedTypeName name="java.lang.StringBuilder"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.nio.file.Files"/>
+<fullyQualifiedTypeName name="java.nio.charset.StandardCharsets"/>
+<fullyQualifiedTypeName name="java.nio.file.Path"/>
+<fullyQualifiedTypeName name="java.nio.file.Paths"/>
+<fullyQualifiedTypeName name="FileUtils.FileUtils"/>
 <fullyQualifiedTypeName name="ConsoleMessages.MsgFile"/>
-<fullyQualifiedTypeName name="ConsoleMessages.MsgGeneral"/>
+<fullyQualifiedTypeName name="FileUtil.FolderFiles.Extension"/>
+<fullyQualifiedTypeName name="FileUtils.FolderFiles"/>
+<fullyQualifiedTypeName name="FileUtils.FolderFiles.Extension"/>
 </qualifiedTypeNameHistroy>

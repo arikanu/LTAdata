@@ -1,0 +1,15 @@
+package FileUtils;
+
+import java.io.InputStream;
+
+public class FileUtils {
+
+	public static String readAllText(String filepath) {
+		StringBuilder sb = new StringBuilder(512);
+		try {
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+}

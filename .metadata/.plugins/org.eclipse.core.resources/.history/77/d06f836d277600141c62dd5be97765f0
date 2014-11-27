@@ -1,0 +1,16 @@
+import java.io.IOException;
+
+import FileUtils.FolderFiles.Extension;
+
+public class abc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FolderFiles ff = new FolderFiles("D:/Postdoc/Data/LTA/", FileUtils.FolderFiles.Extension.TXT, "TravelTimeSet");
+		
+		
+		
+		ff.combineFiles("TravelTimeSet.txt");
+	}
+
+}

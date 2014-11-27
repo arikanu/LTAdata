@@ -1,0 +1,19 @@
+import java.io.IOException;
+
+import FileUtils.FolderFiles;
+import FileUtils.FolderFiles.Extension;
+
+
+public class CombineFilesMain {
+
+	public static void main(String[] args) throws IOException {
+		
+		String folderName = "D:/Postdoc/Data/LTA/";
+		
+		FolderFiles folderFilesERPRate = new FolderFiles("D:/Postdoc/Data/LTA/", Extension.TXT, "ERPRate");
+		folderFilesERPRate.combineFiles("_ERPRate.txt");
+		FolderFiles folderFilesTravelTimeSet = new FolderFiles("D:/Postdoc/Data/LTA/", Extension.TXT, "TravelTimeSet");
+		folderFilesTravelTimeSet.combineFiles("_TravelTimeSet.txt");
+	}
+
+}

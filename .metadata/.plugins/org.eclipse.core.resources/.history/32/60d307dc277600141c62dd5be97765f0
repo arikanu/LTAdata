@@ -1,0 +1,13 @@
+import FileUtils.FolderFiles;
+import FileUtils.FolderFiles.Extension;
+
+
+public class CombineFilesMain {
+
+	public static void main(String[] args) {
+		
+		FolderFiles folderFiles = new FolderFiles("D:/Postdoc/Data/LTA/", Extension.TXT, "ERPRate");
+
+	}
+
+}

@@ -44,7 +44,7 @@ public class ERPRates {
 			dos.println(new StrList(item.getStringList()).delimitedStr(delimiter));
 		}
 		dos.close(); fos.close();
-		MsgFile.fileWritten(pathname);
+		MsgFile.fileCreated(pathname);
 	}
 
 	public ArrayList<ERPRate> getList() {

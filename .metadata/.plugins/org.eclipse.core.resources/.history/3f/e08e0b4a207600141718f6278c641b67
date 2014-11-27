@@ -1,0 +1,17 @@
+package BatchFile;
+
+import TextUtils.StrFileName;
+
+public class abc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		FolderFiles ff = new FolderFiles("D:/Postdoc/Data/LTA/", "txt");
+		
+		System.out.println(ff.getFilenames().size());
+		System.out.println(ff.getFilenames().get(3).toString());
+		System.out.println(StrFileName.getExtension("D:/Postdoc/Data/LTA/" + ff.getFilenames().get(3).toString()));
+	}
+
+}

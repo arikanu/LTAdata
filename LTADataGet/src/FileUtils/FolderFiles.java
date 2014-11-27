@@ -1,0 +1,74 @@
+package FileUtils;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import ConsoleMessages.MsgFile;
+import TextUtils.StrFileName;
+import TextUtils.StrSubstring;
+
+public class FolderFiles {
+
+	public enum Extension { ALL, XML, TXT, CSV, XLSX, XLS, XLSM }; 
+	
+	private String folderPath;
+	private ArrayList<String> filenames;
+	private ArrayList<Extension> extensions;
+	private ArrayList<String> filenameIncludes;
+	
+	public FolderFiles(String folderPath, Extension extension, String filenameIncludes) {
+		this.folderPath = folderPath;
+		this.extensions = new ArrayList<FolderFiles.Extension>() {{ add(extension); }};
+		this.filenameIncludes = new ArrayList<String>() {{ add(filenameIncludes); }};
+		this.filenames = constructFilenames();
+	}
+	
+	
+	private ArrayList<String> constructFilenames() {
+		ArrayList<String> filepaths = new ArrayList<String>();
+		File[] files = new File(this.folderPath).listFiles();
+		for (File file : files) {
+			if (satisfiesExtensionCondition(file.getName()) && satisfiesInludesStringCondition(file.getName())) {
+				filepaths.add(file.getName());
+			}
+		}
+		return filepaths;
+	}
+	
+	
+	private boolean satisfiesExtensionCondition(String filename) {
+		if (extensions == null) { return true; }
+		if (extensions.size() == 0) { return true; }
+		String ext = StrFileName.getExtension(filename).toLowerCase();
+		for (Extension extension : extensions) {
+			if (extension.toString().toLowerCase().equals(ext)) { return true; }
+			else if (extension.equals(Extension.ALL)) { return true; }
+		} return false;
+	}
+	
+	private boolean satisfiesInludesStringCondition(String filename) {
+		if (filenameIncludes == null) { return true; }
+		if (filenameIncludes.size() == 0) { return true; }
+		for (String include : filenameIncludes) {
+			if (StrSubstring.includes(filename.toLowerCase(), include.toLowerCase())) { return true; }
+			else if (include.equals("")) { return true; }
+		} return false;
+	}
+
+
+	public void combineFiles(String combinedFilename) throws IOException {
+		FileWriter fos = new FileWriter(this.folderPath + combinedFilename); PrintWriter dos = new PrintWriter(fos);
+		for (String filename : this.filenames) {
+			dos.println(FileUtils.readAllText(this.folderPath + filename));
+		}
+		dos.close(); fos.close();
+		MsgFile.fileCreated(this.folderPath + combinedFilename);
+	}
+	
+	// GETTERS & SETTERS
+	public ArrayList<String> getFilenames() { return filenames; }
+	
+}

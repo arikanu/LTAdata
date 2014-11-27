@@ -46,3 +46,20 @@
 1417072041047	Rename type 'ConsoleFile'
 1417072086784	Rename local variable 'currFileName'
 1417073489597	Delete element
+1417082676398	Rename type 'BatchFileUtils'
+1417083332911	Rename method 'getFilepaths'
+1417083343217	Rename field 'filepaths'
+1417083353316	Rename method 'constructFilepaths'
+1417085552930	Rename package 'BatchFile'
+1417086132003	Rename method 'fileWritten'
+1417086188413	Rename local variable 'pathname'
+1417086855858	Delete element
+1417086859077	Copy compilation units
+1417086870937	Delete element
+1417086897486	Rename package 'abcccc'
+1417087090427	Delete element
+1417087099037	Rename package 'FileUtil'
+1417087181433	Delete element
+1417087263172	Delete element
+1417087286033	Delete element
+1417087346130	Rename type 'main'

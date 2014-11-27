@@ -1,0 +1,21 @@
+import java.io.IOException;
+
+import FileUtils.FolderFiles;
+import FileUtils.FolderFiles.Extension;
+
+
+public class CombineFilesMain {
+
+	public static void main(String[] args) throws IOException {
+		
+		//		Update 'folderName'
+			//		Xml and Txt files will be located under this folder (make sure the path is valid).
+		String folderName = "D:/Postdoc/Data/LTA/";
+		
+		FolderFiles folderFilesERPRate = new FolderFiles(folderName, Extension.TXT, "ERPRate");
+		folderFilesERPRate.combineFiles("_ERPRate.txt");
+		FolderFiles folderFilesTravelTimeSet = new FolderFiles(folderName, Extension.TXT, "TravelTimeSet");
+		folderFilesTravelTimeSet.combineFiles("_TravelTimeSet.txt");
+	}
+
+}
