@@ -1,0 +1,66 @@
+package XmlUtils;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.URLConnection;
+import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.stream.XMLInputFactory;
+
+public class DataSet {
+
+	private String fileName;
+	private String apiUrl;
+	private final String folderName = "D:/Postdoc/Data/LTA/";
+	private ArrayList<String> xmlFileNames;
+	
+	public DataSet(String writeFileNumber, String dataSetName, String apiUrl) {
+		this.fileName = folderName + dataSetName + "-" + writeFileNumber;
+		this.apiUrl = apiUrl;
+	}
+	
+	public void createXmlFiles() throws IOException {
+		xmlFileNames = new ArrayList<String>();
+		String apiUrlSkip;
+		int skip = 0;
+		int connCount = 0;
+		boolean cont = true;
+		while (cont) {
+			apiUrlSkip = apiUrl + "?$skip=" + skip;
+			URLConnection conn = (new Connection(apiUrlSkip)).getConn();
+			BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+			String line = "";
+			String wholeXML = "";
+			while ((line = br.readLine()) != null) {
+				wholeXML += line;
+			}
+						
+			skip = skip + 50;
+			connCount += 1;
+			
+			if (wholeXML != "") { writeXmlFile(fileName + "-" + connCount + ".xml", wholeXML); }
+			if (wholeXML == "" || skip >= 3000) { cont = false; }
+		}
+	}
+	
+	private void writeXmlFile(String currFileName, String wholeXml) throws IOException {
+		File file = new File(currFileName);
+		if (!file.exists()) {
+			file.createNewFile();
+		}
+		FileWriter fw = new FileWriter(file.getAbsoluteFile());
+		BufferedWriter bw = new BufferedWriter(fw);
+		bw.write(wholeXml);
+		bw.close();
+	}
+
+}

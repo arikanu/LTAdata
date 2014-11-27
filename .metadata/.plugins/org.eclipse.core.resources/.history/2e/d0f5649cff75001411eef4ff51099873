@@ -1,0 +1,8 @@
+package TextUtils;
+
+public class StrFind {
+
+	public static String readAfterLast(String str, String readAfter) {
+		
+	}
+}

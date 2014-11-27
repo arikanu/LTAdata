@@ -1,0 +1,13 @@
+This program is designed for extracting:
+     * ERPRate
+     * TimeTravelSet
+data sets from LTA (Land Transport Authority, http://www.lta.gov.sg/content/ltaweb/en.html).
+
+Other data sets can be found here:
+	http://datamall.mytransport.sg/tool.aspx
+
+In order to extract another data set:
+	1)	download a sample data set to find out the fields in the XML file
+	2)	
+
+      

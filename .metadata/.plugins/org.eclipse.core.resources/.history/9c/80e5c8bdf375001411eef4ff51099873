@@ -1,0 +1,14 @@
+package TextWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+public class TextWritingUtils {
+
+	public static PrintWriter createFileGetPrintWriter(String filename) throws IOException {
+		FileWriter fos = new FileWriter(filename);
+		PrintWriter dos = new PrintWriter(fos);
+		return dos;
+	}
+}

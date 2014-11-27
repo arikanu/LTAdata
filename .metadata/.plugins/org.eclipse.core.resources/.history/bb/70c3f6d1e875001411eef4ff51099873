@@ -1,0 +1,8 @@
+package XmlReader;
+
+public class XmlUtils {
+
+	public static getNodeListByTag(String tag) {
+		
+	}
+}

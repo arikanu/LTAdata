@@ -1,0 +1,90 @@
+package dataSets;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import java.lang.reflect.Field;
+
+
+import XmlReader.XmlUtils;
+
+public class ERPRate {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String ERPID;
+	private String VCCType;
+	private String DayType;
+	private String EffectiveDate;
+	private String ZoneID;
+	private String ChargeAmount;
+	private String StartTime;
+	private String EndTime;
+	private String Summary;
+	private String CreateDate;
+	
+	public ERPRate(Node node) {
+		
+		this.id = XmlUtils.getFirstElementFromNodeByTag(node, "id");
+		this.title = XmlUtils.getFirstElementFromNodeByTag(node, "title");
+		this.summary = XmlUtils.getFirstElementFromNodeByTag(node, "summary");
+		this.updated = XmlUtils.getFirstElementFromNodeByTag(node, "updated");
+		this.author = XmlUtils.getFirstElementFromNodeByTag(node, "author");
+		//this.link = XmlUtils.getFirstElementFromNodeByTag(node, "link");
+		//this.category = XmlUtils.getFirstElementFromNodeByTag(node, "category");
+		
+		this.ERPID = XmlUtils.getFirstElementFromNodeByTag(node, "d:ERPID");
+		this.VCCType = XmlUtils.getFirstElementFromNodeByTag(node, "d:VCCType");
+		this.DayType = XmlUtils.getFirstElementFromNodeByTag(node, "d:DayType");
+		this.EffectiveDate = XmlUtils.getFirstElementFromNodeByTag(node, "d:EffectiveDate");
+		this.ZoneID = XmlUtils.getFirstElementFromNodeByTag(node, "d:ZoneID");
+		this.ChargeAmount = XmlUtils.getFirstElementFromNodeByTag(node, "d:ChargeAmount");
+		this.StartTime = XmlUtils.getFirstElementFromNodeByTag(node, "d:StartTime");
+		this.EndTime = XmlUtils.getFirstElementFromNodeByTag(node, "d:EndTime");
+		this.Summary = XmlUtils.getFirstElementFromNodeByTag(node, "d:Summary");
+		this.CreateDate = XmlUtils.getFirstElementFromNodeByTag(node, "d:CreateDate");
+	}
+	
+	public ArrayList<String> getStringList(PrintWriter dos) {
+		ArrayList<String> strList = new ArrayList<String>();
+		strList.add(this.id);
+		strList.add(this.title);
+		strList.add(this.summary);
+		strList.add(this.updated);
+		strList.add(this.author);
+		strList.add(this.link);
+		strList.add(this.category);
+		strList.add(this.ERPID);
+		strList.add(this.VCCType);
+		strList.add(this.DayType);
+		strList.add(this.EffectiveDate);
+		strList.add(this.ZoneID);
+		strList.add(this.ChargeAmount);
+		strList.add(this.StartTime);
+		strList.add(this.EndTime);
+		strList.add(this.Summary);
+		strList.add(this.CreateDate);
+		Field[] fields = ERPRate.class.getFields();
+		
+		return strList;
+	}
+	
+}

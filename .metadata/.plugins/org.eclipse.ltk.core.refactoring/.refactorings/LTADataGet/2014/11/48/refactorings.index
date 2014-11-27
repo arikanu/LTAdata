@@ -6,3 +6,43 @@
 1417021811202	Rename type 'ERPRate'
 1417022004452	Rename method 'writeToFile'
 1417022172047	Rename method 'setWholeXml'
+1417058050811	Delete element
+1417060675988	Rename method 'getNodeListByTag'
+1417061246507	Rename method 'getFirstElementOfNodeList'
+1417062227676	Rename field 'ZoneId'
+1417067162109	Rename method 'createFileWithHeaderAndGetPrintWriter'
+1417067373283	Rename local variable 'erpRate'
+1417067383924	Rename local variable 'erpRate'
+1417067738806	Move compilation unit
+1417067749306	Delete element
+1417067806200	Rename type 'ListOperations'
+1417068146881	Rename type 'TextWritingUtils'
+1417068172570	Delete element
+1417068284019	Rename package 'dataSets'
+1417068304006	Rename package 'XmlReader'
+1417068313792	Move compilation unit
+1417068322381	Move compilation unit
+1417069101579	Rename method 'writeToFile'
+1417069341314	Rename local variable 'erprate'
+1417069350308	Rename local variable 'traveltimeset'
+1417069588049	Rename local variable 'wholeXML'
+1417069599575	Rename local variable 'wholeXml'
+1417069615155	Rename local variable 'wholeXml'
+1417070008829	Rename type 'StrFileNames'
+1417070357471	Rename type 'StrFind'
+1417070443251	Rename method 'clearExtension'
+1417070517587	Rename method 'getFileNameFromFullPath'
+1417070527313	Rename method 'clearExtensionFromFullPath'
+1417070618154	Rename field 'xmlFileNames'
+1417070632962	Rename method 'getXmlFileNames'
+1417070952500	Rename local variable 'fullpath'
+1417071369617	Rename method 'changeExtensionOfFullpath'
+1417071548642	Rename local variable 'xmlFilename'
+1417071605036	Rename local variable 'filename'
+1417071622741	Rename local variable 'filename'
+1417071633743	Rename local variable 'filename'
+1417071645065	Rename local variable 'filename'
+1417071862218	Rename field 'fileName'
+1417072041047	Rename type 'ConsoleFile'
+1417072086784	Rename local variable 'currFileName'
+1417073489597	Delete element

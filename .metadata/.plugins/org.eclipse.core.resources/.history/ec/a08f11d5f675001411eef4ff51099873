@@ -1,0 +1,47 @@
+package dataSets;
+
+import org.w3c.dom.Node;
+
+import XmlReader.XmlUtils;
+
+public class TimeTravelSet {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String TravelTimeID;
+	private String Name;
+	private String Direction;
+	private String FarEndPoint;
+	private String StartPoint;
+	private String EndPoint;
+	private String EstimatedTime;
+	private String Summary;
+	private String CreateDate;
+	
+	public TimeTravelSet(Node node) {
+		
+		this.id = XmlUtils.getFirstElementFromNodeByTag(node, "id");
+		this.title = XmlUtils.getFirstElementFromNodeByTag(node, "title");
+		this.summary = XmlUtils.getFirstElementFromNodeByTag(node, "summary");
+		this.updated = XmlUtils.getFirstElementFromNodeByTag(node, "updated");
+		this.author = XmlUtils.getFirstElementFromNodeByTag(node, "author");
+		//this.link = XmlUtils.getFirstElementFromNodeByTag(node, "link");
+		//this.category = XmlUtils.getFirstElementFromNodeByTag(node, "category");
+		
+		this.TravelTimeID = XmlUtils.getFirstElementFromNodeByTag(node, "d:TravelTimeID");
+		this.Name = XmlUtils.getFirstElementFromNodeByTag(node, "d:Name");
+		this.Direction = XmlUtils.getFirstElementFromNodeByTag(node, "d:Direction");
+		this.FarEndPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:FarEndPoint");
+		this.StartPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:StartPoint");
+		this.EndPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:EndPoint");
+		this.EstimatedTime = XmlUtils.getFirstElementFromNodeByTag(node, "d:EstimatedTime");
+		this.Summary = XmlUtils.getFirstElementFromNodeByTag(node, "d:Summary");
+		this.CreateDate = XmlUtils.getFirstElementFromNodeByTag(node, "d:CreateDate");
+	}
+	
+}

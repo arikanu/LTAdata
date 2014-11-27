@@ -1,0 +1,23 @@
+package dataSets;
+
+public class TimeTravelSet {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String ERPID;
+	private String VCCType;
+	private String DayType;
+	private String EffectiveDate;
+	private String ZoneID;
+	private String ChargeAmount;
+	private String StartTime;
+	private String EndTime;
+	private String Summary;
+	private String CreateDate;
+	
+}

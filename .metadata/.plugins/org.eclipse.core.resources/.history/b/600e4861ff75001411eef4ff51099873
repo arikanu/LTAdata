@@ -1,0 +1,12 @@
+package TextUtils;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class StrFileName {
+
+	public static String getFileName(String pathname) {
+		Path path = Paths.get(pathname);
+		return path.getFileName().toString();
+	}
+}

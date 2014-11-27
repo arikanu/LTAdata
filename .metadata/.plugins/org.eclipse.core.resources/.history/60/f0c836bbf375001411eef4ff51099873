@@ -1,0 +1,10 @@
+package TextWriter;
+
+import java.io.PrintWriter;
+
+public class TextWritingUtils {
+
+	public static PrintWriter createFileGetPrintWriter(String filename) {
+		
+	}
+}

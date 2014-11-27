@@ -1,0 +1,70 @@
+package dataSets;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+import XmlReader.XmlUtils;
+
+public class ERPRate {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String ERPID;
+	private String VCCType;
+	private String DayType;
+	private String EffectiveDate;
+	private String ZoneID;
+	private String ChargeAmount;
+	private String StartTime;
+	private String EndTime;
+	private String Summary;
+	private String CreateDate;
+	
+	public ERPRate(File file) throws ParserConfigurationException, SAXException, IOException {
+		
+		DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
+		DocumentBuilder db = dbf.newDocumentBuilder();
+		Document doc = db.parse(file);
+		NodeList nodeLst = XmlUtils.getNodeListFromDocByTag(doc, "entry");
+		for (int s = 0; s < nodeLst.getLength(); s++) {
+			this.id = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "id");
+			this.title = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "title");
+			this.summary = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "summary");
+			this.updated = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "updated");
+			this.author = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "author");
+			//this.link = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "link");
+			//this.category = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "category");
+			
+			this.ERPID = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:ERPID");
+			this.VCCType = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:VCCType");
+			this.DayType = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:DayType");
+			this.EffectiveDate = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:EffectiveDate");
+			this.ZoneID = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:ZoneID");
+			this.ChargeAmount = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:ChargeAmount");
+			this.StartTime = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:StartTime");
+			this.EndTime = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:EndTime");
+			this.Summary = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:Summary");
+			this.CreateDate = XmlUtils.getFirstElementFromNodeByTag(nodeLst.item(s), "d:CreateDate");
+			//*/
+		}
+		
+		System.out.println(this.id);
+	}
+	
+	
+}

@@ -1,0 +1,19 @@
+package ClassAnalysis;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+
+import dataSets.ERPRate;
+
+public class ClassUtils {
+
+	public static ArrayList<String> getFieldList(Class _class) {
+		ArrayList<String> fieldList = new ArrayList<String>();
+		Field[] fields = _class.getDeclaredFields();
+		System.out.println("length: " + fields.length);
+		for (Field field : fields) {
+			fieldList.add(field.getName().toString());
+		}
+		return fieldList;
+	}
+}

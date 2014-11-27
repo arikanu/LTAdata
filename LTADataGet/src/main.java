@@ -1,16 +1,60 @@
 import java.io.IOException;
 
-import dataSets.DataSet;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
+import ConsoleMessages.MsgGeneral;
+import TextUtils.StrFileName;
+import XmlClasses.ERPRates;
+import XmlClasses.TimeTravelSets;
+import XmlUtils.DataSet;
 
 
 public class main {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
 
-		String dayId = "0";
+		//	Update 'dayId'
+		//		you can enter any number, but MMDD is suggested.
+		//		this will appear in the names of the datafiles
+		String dayId = "1127";
 		
-		new DataSet(dayId, "ERPRate", "http://datamall.mytransport.sg/ltaodataservice.svc/ERPRateSet").createXmlFiles();
-		new DataSet(dayId, "TravelTimeSet", "http://datamall.mytransport.sg/ltaodataservice.svc/TravelTimeSet").createXmlFiles();	
+		//	Update 'skipStartNb' and 'itemLimit'
+		//		the first 'skipStartNb' items of the database will be skipped
+		//		starting from "skipStartNb', 'itemLimit' number entries will be extracted (if available)
+		long skipStartNb = 0;
+		long itemLimit = 50000;
+		
+		//	Update 'folderName'
+		//		Xml and Txt files will be located under this folder (make sure the path is valid).
+		final String folderName = "D:/Postdoc/Data/LTA/";
+		
+		//	Update 'delimiter'
+		//		this determines the type of the Txt files ("\t" for tab delimited)
+		String delimiter = "\t";
+		
+		
+		
+		
+		
+		
+		DataSet erpRate = new DataSet(folderName, dayId, "ERPRate", "http://datamall.mytransport.sg/ltaodataservice.svc/ERPRateSet");
+		erpRate.createXmlFiles(skipStartNb, itemLimit);
+		for (String xmlFilepath : erpRate.getXmlFilepaths()) {
+			ERPRates erpRates = new ERPRates(xmlFilepath);
+			erpRates.writeToTabDelimitedFile(StrFileName.changeExtension(xmlFilepath, "txt"), delimiter);
+		}
+		
+		DataSet travelTimeSet = new DataSet(folderName, dayId, "TravelTimeSet", "http://datamall.mytransport.sg/ltaodataservice.svc/TravelTimeSet");
+		travelTimeSet.createXmlFiles(skipStartNb, itemLimit);
+		for (String xmlFilepath : travelTimeSet.getXmlFilepaths()) {
+			TimeTravelSets travelTimeSets = new TimeTravelSets(xmlFilepath);
+			travelTimeSets.writeToTabDelimitedFile(StrFileName.changeExtension(xmlFilepath, "txt"), delimiter);
+		}
+
+		
+		MsgGeneral.processCompleted();
 		
 	}
 

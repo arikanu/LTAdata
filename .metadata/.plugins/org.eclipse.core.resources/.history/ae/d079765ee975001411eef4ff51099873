@@ -1,0 +1,18 @@
+package XmlReader;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NodeList;
+
+public class XmlUtils {
+
+	public static NodeList getNodeListByTag(Document doc, String tag) {
+		return doc.getElementsByTagName("entry");
+	}
+	
+	public static String getFirstElementOfNodeList(Document doc, String tagParent, String tagChild) {
+		NodeList nodeList = getNodeListByTag(doc, tagParent);
+		Element fstElmnt = (Element) fstNode;
+		NodeList fstNmElmntLst = fstElmnt.getElementsByTagName(tagChild);
+	}
+}

@@ -1,0 +1,7 @@
+package ConsoleMessages;
+
+public class MsgGeneral {
+
+	public static String processCompleted() { System.out.println("Process completed."); }
+	
+}

@@ -1,0 +1,8 @@
+package TextWriter;
+
+public class TextWritingUtils {
+
+	public static PrintWriter getPrintWriter() {
+		
+	}
+}

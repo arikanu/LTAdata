@@ -1,0 +1,12 @@
+package dataSets;
+
+import java.util.ArrayList;
+
+public class ERPRates {
+
+	private ArrayList<ERPRate> list;
+	
+	public ERPRates() {
+		
+	}
+}

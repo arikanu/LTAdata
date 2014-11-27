@@ -1,0 +1,20 @@
+package TextUtils;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class StrFileName {
+
+	public static String getFileNameFromFullPath(String pathname) {
+		Path path = Paths.get(pathname);
+		return path.getFileName().toString();
+	}
+	
+	public static String clearExtensionFromFilename(String filename) {
+		return StrSubstring.readUptoLast(filename, ".");
+	}
+	
+	public static String clearExtensionFromFullPath(String pathname) {
+		return StrSubstring.readUptoLast(getFileNameFromFullPath(pathname), ".");
+	}
+}

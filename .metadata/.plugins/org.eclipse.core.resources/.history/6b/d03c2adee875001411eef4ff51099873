@@ -1,0 +1,10 @@
+package XmlReader;
+
+import org.w3c.dom.NodeList;
+
+public class XmlUtils {
+
+	public static NodeList getNodeListByTag(String tag) {
+		
+	}
+}

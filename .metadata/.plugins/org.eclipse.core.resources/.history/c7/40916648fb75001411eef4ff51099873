@@ -1,0 +1,72 @@
+package dataSets;
+
+import java.util.ArrayList;
+
+import org.w3c.dom.Node;
+
+import ClassAnalysis.ClassUtils;
+import XmlReader.XmlClassUnloadUtils;
+import XmlReader.XmlUtils;
+
+public class TimeTravelSet {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String TravelTimeID;
+	private String Name;
+	private String Direction;
+	private String FarEndPoint;
+	private String StartPoint;
+	private String EndPoint;
+	private String EstimatedTime;
+	private String Summary;
+	private String CreateDate;
+	
+	public TimeTravelSet(Node node) {
+		
+		this.id = XmlUtils.getFirstElementFromNodeByTag(node, "id");
+		this.title = XmlUtils.getFirstElementFromNodeByTag(node, "title");
+		this.summary = XmlUtils.getFirstElementFromNodeByTag(node, "summary");
+		this.updated = XmlUtils.getFirstElementFromNodeByTag(node, "updated");
+		this.author = XmlUtils.getFirstElementFromNodeByTag(node, "author");
+		//this.link = XmlUtils.getFirstElementFromNodeByTag(node, "link");
+		//this.category = XmlUtils.getFirstElementFromNodeByTag(node, "category");
+		
+		this.TravelTimeID = XmlUtils.getFirstElementFromNodeByTag(node, "d:TravelTimeID");
+		this.Name = XmlUtils.getFirstElementFromNodeByTag(node, "d:Name");
+		this.Direction = XmlUtils.getFirstElementFromNodeByTag(node, "d:Direction");
+		this.FarEndPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:FarEndPoint");
+		this.StartPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:StartPoint");
+		this.EndPoint = XmlUtils.getFirstElementFromNodeByTag(node, "d:EndPoint");
+		this.EstimatedTime = XmlUtils.getFirstElementFromNodeByTag(node, "d:EstimatedTime");
+		this.Summary = XmlUtils.getFirstElementFromNodeByTag(node, "d:Summary");
+		this.CreateDate = XmlUtils.getFirstElementFromNodeByTag(node, "d:CreateDate");
+	}
+	
+	public ArrayList<String> getStringList() {
+		ArrayList<String> strList = new ArrayList<String>();
+		strList.add(this.id);
+		strList.add(this.title);
+		strList.add(this.summary);
+		strList.add(this.updated);
+		strList.add(this.author);
+		strList.add(this.link);
+		strList.add(this.category);
+		strList.add(this.TravelTimeID);
+		strList.add(this.Name);
+		strList.add(this.Direction);
+		strList.add(this.FarEndPoint);
+		strList.add(this.StartPoint);
+		strList.add(this.EndPoint);
+		strList.add(this.EstimatedTime);
+		strList.add(this.Summary);
+		strList.add(this.CreateDate);
+		return strList;
+	}
+	
+}

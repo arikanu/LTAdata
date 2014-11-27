@@ -1,0 +1,12 @@
+package ClassAnalysis;
+
+import java.util.ArrayList;
+
+public class ClassUtils {
+
+	public static ArrayList<String> getFieldList(Class _class) {
+		ArrayList<String> strList = new ArrayList<String>();
+		
+		return strList;
+	}
+}

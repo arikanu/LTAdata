@@ -1,0 +1,37 @@
+package TextWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+public class TextWritingUtils {
+
+	public static PrintWriter createFileGetPrintWriter(String filename) throws IOException {
+		FileWriter fos = new FileWriter(filename);
+		PrintWriter dos = new PrintWriter(fos);
+		
+		return dos;
+	}
+	
+	public static void unloadListClassToTextfile(String filename, Class _class) throws IOException {
+		FileWriter fos = new FileWriter(filename);
+		PrintWriter dos = new PrintWriter(fos);
+		
+	}
+	
+	public static String convertStrListToDelimited(ArrayList<String> strList, String delimiter) {
+		if (strList.size() == 0) {
+			return "";
+		} else {
+			String str = strList.get(0);
+			for (int i = 1; i < strList.size(); i++) {
+				str = str + delimiter + strList.get(i);
+			}
+			return str;
+		}
+	}
+	public static String getClassHeader() {
+		
+	}
+}

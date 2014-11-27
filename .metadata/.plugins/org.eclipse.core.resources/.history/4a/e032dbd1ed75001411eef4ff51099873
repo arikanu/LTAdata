@@ -1,0 +1,7 @@
+package dataSets;
+
+public class ERPRates {
+
+	private ArrayList<ERPRate> list;
+	
+}

@@ -1,0 +1,9 @@
+package TextUtils;
+
+public class StrFind {
+
+	public static String readAfterLast(String str, String readAfter) {
+		int i = str.lastIndexOf(readAfter);
+		return str.substring(i);
+	}
+}

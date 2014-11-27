@@ -1,0 +1,37 @@
+import java.io.IOException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
+
+import TextUtils.StrFileName;
+import XmlClasses.ERPRates;
+import XmlClasses.TimeTravelSets;
+import XmlUtils.DataSet;
+
+
+public class main {
+
+	public static void main(String[] args) throws IOException, ParserConfigurationException, SAXException {
+
+		String delimiter = "\t";
+		String dayId = "1127";
+		int itemLimit = 5000;
+		
+		DataSet erpRate = new DataSet(dayId, "ERPRate", "http://datamall.mytransport.sg/ltaodataservice.svc/ERPRateSet");
+		erpRate.createXmlFiles(100);
+		for (String xmlFilepath : erpRate.getXmlFilepaths()) {
+			ERPRates erpRates = new ERPRates(xmlFilepath);
+			erpRates.writeToTabDelimitedFile(StrFileName.changeExtension(xmlFilepath, "txt"), delimiter);
+		}
+		
+		DataSet travelTimeSet = new DataSet(dayId, "TravelTimeSet", "http://datamall.mytransport.sg/ltaodataservice.svc/TravelTimeSet");
+		travelTimeSet.createXmlFiles(100);
+		for (String xmlFilepath : travelTimeSet.getXmlFilepaths()) {
+			TimeTravelSets travelTimeSets = new TimeTravelSets(xmlFilepath);
+			travelTimeSets.writeToTabDelimitedFile(StrFileName.changeExtension(xmlFilepath, "txt"), delimiter);
+		}
+		
+	}
+
+}

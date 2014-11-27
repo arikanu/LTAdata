@@ -1,0 +1,34 @@
+package TextWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
+import ClassAnalysis.ClassUtils;
+import dataSets.ERPRate;
+
+public class TextWritingUtils {
+
+	
+	public static PrintWriter createFileWithHeaderAndGetPrintWriter(Class _class, PrintWriter dos, String delimiter) throws IOException {
+		dos.println(getClassHeader(_class, delimiter));
+		return dos;
+	}
+	
+	public static String convertStrListToDelimited(ArrayList<String> strList, String delimiter) {
+		if (strList.size() == 0) {
+			return "";
+		} else {
+			String str = strList.get(0);
+			for (int i = 1; i < strList.size(); i++) {
+				str = str + delimiter + strList.get(i);
+			}
+			return str;
+		}
+	}
+	
+	public static String getClassHeader(Class _class, String delimiter) {
+		return convertStrListToDelimited(ClassUtils.getFieldNameList(ERPRate.class), delimiter);
+	}
+}

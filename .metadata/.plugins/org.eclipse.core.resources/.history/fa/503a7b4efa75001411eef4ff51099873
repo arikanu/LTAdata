@@ -1,0 +1,12 @@
+package TextUtils;
+
+import java.util.ArrayList;
+
+public class StrList {
+
+	public ArrayList<String> list;
+	
+	public StrList(ArrayList<String> strList) {
+		list = strList;
+	}
+}

@@ -1,0 +1,16 @@
+package TextUtils;
+
+import java.util.ArrayList;
+
+public class StrList {
+
+	public ArrayList<String> list;
+	
+	public StrList(ArrayList<String> strList) {
+		this.list = strList;
+	}
+	
+	public String delimitedStr(String delimiter) {
+		
+	}
+}

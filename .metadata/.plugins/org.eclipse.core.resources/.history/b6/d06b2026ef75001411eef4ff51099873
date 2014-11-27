@@ -1,0 +1,22 @@
+package dataSets;
+
+public class TimeTravelSet {
+
+	private String id;
+	private String title;
+	private String summary;
+	private String updated;
+	private String author;
+	private String link;
+	private String category;
+	private String TravelTimeID;
+	private String Name;
+	private String Direction;
+	private String FarEndPoint;
+	private String StartPoint;
+	private String EndPoint;
+	private String EstimatedTime;
+	private String Summary;
+	private String CreateDate;
+	
+}

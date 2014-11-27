@@ -1,0 +1,13 @@
+package TextUtils;
+
+import java.io.File;
+
+public class StrFileNames {
+
+	public static String getFileName(String pathname) {
+		File file = new File(pathname);
+		
+		
+		return "";
+	}
+}
